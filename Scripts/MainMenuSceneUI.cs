@@ -22,19 +22,19 @@ public class MainMenuSceneUI : MonoBehaviour
 
     void TaskOnClick()
     {
-        FindObjectOfType<AudioManager>().Play(selectSound[Random.Range(0, 2)]);
+        FindObjectOfType<AudioManager>().Play(selectSound[Random.Range(0, selectSound.length()-1)]);
         Loader.Load(Loader.Scene.Controls);
     }
 
     void ToCredits()
     {
-        FindObjectOfType<AudioManager>().Play(selectSound[Random.Range(0, 2)]);
+        FindObjectOfType<AudioManager>().Play(selectSound[Random.Range(0, selectSound.length()-1)]);
         Loader.Load(Loader.Scene.Credits);
     }
 
     void Exit()
     {
-        FindObjectOfType<AudioManager>().Play(selectSound[Random.Range(0, 2)]);
+        FindObjectOfType<AudioManager>().Play(selectSound[Random.Range(0, selectSound.length()-1)]);
         Application.Quit();
     }
 }
